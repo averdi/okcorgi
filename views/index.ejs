@@ -7,5 +7,11 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+ <% corgis.forEach (function(corgi) { %>
+    <p>Corgi Name: <%= corgi.name %></p>
+    <p>Description: <%= pirate.description %></p>
+    <% }); %>
+
   </body>
 </html>
