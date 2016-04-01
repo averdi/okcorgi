@@ -10,8 +10,12 @@
 
     <p>Corgi Name: <%= corgi.name %></p>
     <p>Description: <%= corgi.description %></p>
+    <img src="<%= corgi.pictureURL %>" alt="Corgi" height="142" width="142">
 
 <!-- A form with a submit button "like", goes to post request that changes liked attr to true -->
+<form name="new_user_form" id="new_user_form" method="post" action="/corgis">
+    <input type="submit" value="Like">
+</form>
 
   </body>
 </html>
