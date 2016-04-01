@@ -21,9 +21,8 @@ router.post('/', function(req, res, next) {
 //     var id = req.body.id;
 //     var liked = req.body.liked;
 
-//   Corgi.findbyIdAndUpdate = function(id, update, options, callback) {
-//     if (liked === "like") {
-//   }
+// if (liked === true) {
+// Corgi.findbyIdAndUpdate(id, {liked: true}, '/')
 
 // }
 
