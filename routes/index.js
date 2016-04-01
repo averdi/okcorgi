@@ -5,10 +5,11 @@ var Corgi = require('../models/corgi');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Corgi.find({}, 'name description pictureURL', function(err, corgis) {
-    if (err) console.log(err);
-    console.log(corgis)
-    res.render('index', {title: 'Corgis you Like'});
+  Corgi.findOneRandom({}, function(err, corgi) {
+    res.render('show', {
+      title: 'Corgis on the market',
+      corgi: corgi
+    });
   });
 });
 

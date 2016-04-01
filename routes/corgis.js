@@ -6,7 +6,8 @@ var Corgi = require('../models/corgi');
 
 router.get('/', function(req, res, next) {
   Corgi.find({}, function(err, corgis) {
-    res.render('showall', {
+    console.log(corgis);
+    res.render('index', {
       title: 'Corgis you Like',
       corgis: corgis
     });

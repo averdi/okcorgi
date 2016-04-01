@@ -1,5 +1,6 @@
 // /models/user.js
 var mongoose = require('mongoose');
+var random = require('mongoose-simple-random');
 
 var corgiSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -11,8 +12,7 @@ var corgiSchema = new mongoose.Schema({
   updated_at: Date
 });
 
-
-// js for getting random dogs ea time goes here.
+corgiSchema.plugin(random);
 
 
 

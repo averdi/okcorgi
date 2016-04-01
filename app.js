@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// controllers:
 var routes = require('./routes/index');
 var corgis = require('./routes/corgis');
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_OKAY_CORGI);
 
+// needed in order to use the controllers:
 app.use('/', routes);
 app.use('/corgis', corgis);
 
