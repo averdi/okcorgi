@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var corgiSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
+  liked: Boolean,
   pictureURL: String,
   created_at: Date,
   updated_at: Date
