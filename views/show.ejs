@@ -14,6 +14,8 @@
 
 <!-- A form with a submit button "like", goes to post request that changes liked attr to true -->
 <form name="new_user_form" id="new_user_form" method="post" action="/corgis">
+    <input type="hidden" name="id" value="<%=corgi._id%>">
+    <input type="hidden" name="liked" value="true">
     <input type="submit" value="Like">
 </form>
 

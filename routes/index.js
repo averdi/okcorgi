@@ -14,28 +14,14 @@ router.get('/', function(req, res, next) {
 });
 
 // router.post js to put liked dog into an array
+
+
+  // push this into array of "liked" dogs that will display on /corgis
+
+
 // router.post('/corgis/:id', function(req, res, next){
 
-  router.post('/', function(req, res, next) {
-    var name = req.body.name;
-    var catchphrase = req.body.catchphrase;
 
-    var newPirate = Pirate({
-        name: name,
-        catchphrase: catchphrase,
-    });
-
-    // Save the pirate
-    newPirate.save(function(err, pirate) {
-        if (err) console.log(err);
-
-        res.send('Pirate created!');
-    });
-});
-
-router.get('/new', function(req, res, next) {
-    res.render('corgis/new', { title: 'Corgis you like' });
-});
 
 // both forms submit to this. need if/else for like or dislike forms.
 // will need mongodb queries, findbyidandupdate
